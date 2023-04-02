@@ -1,11 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
-
+const path = require("path");
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"))
+app.use(express.static(path.join(__dirname, 'public')));
 
 const items = ["Eat", "Code", "Valorant"];
 const workItems = [];
