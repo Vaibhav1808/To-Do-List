@@ -29,7 +29,9 @@ app.post("/", function(req, res){
         res.redirect("/work");
     }
     else{
-        items.push(item);
+        if(item !== ""){
+            items.push(item);
+        }
         res.redirect("/");
     }
 
