@@ -10,6 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const items = ["Eat", "Code", "Valorant"];
 const workItems = [];
 
+app.set("views", path.join(__dirname, "views"));
 app.set('view engine', 'ejs');
 
 
